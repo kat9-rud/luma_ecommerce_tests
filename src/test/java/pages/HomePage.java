@@ -42,7 +42,9 @@ public class HomePage extends BasePage {
 
         footerList.shouldHave(size(8));
         footerList
-                .shouldHave(texts("Write for us", "Subscribe to our mailing list", "Contact us", "Hire a Sofware Testing/QA Company", "Search Terms", "Privacy and Cookie Policy", "Advanced Search", "Orders and Returns"));
+                .shouldHave(texts("Write for us", "Subscribe to our mailing list", "Contact us",
+                        "Hire a Sofware Testing/QA Company", "Search Terms", "Privacy and Cookie Policy",
+                        "Advanced Search", "Orders and Returns"));
 
         return this;
     }

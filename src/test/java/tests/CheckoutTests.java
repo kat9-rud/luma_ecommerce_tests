@@ -1,33 +1,52 @@
 package tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
 import helpers.AdsUtils;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
+
+import static io.qameta.allure.Allure.step;
 
 public class CheckoutTests extends TestBase {
     @Test
     public void guestUserCanSuccessfullyCheckout() {
+    SelenideLogger.addListener("allure", new AllureSelenide());
     TestData data = new TestData();
 
-    homePage.openPage().selectMenuItem("Women", "Tees");
+    step("Open home page and select 'women tees' category from the menu navigation", () -> {
+        homePage
+                .openPage()
+                .selectMenuItem("Women", "Tees");
         AdsUtils.removeAds();
+    });
 
+    step("Add a first product in first available size and color to the shopping cart", () -> {
+        productsPage.addFirstProductToTheCart();
+    });
 
-    productsPage.addFirstProductToTheCart();
-    productsPage.checkout();
+    step("Proceed to checkout", () -> {
+        productsPage.checkout();
+    });
 
-    checkoutPage.setEmail(data.email)
-        .setFirstName(data.firstName)
-        .setLastName(data.lastName)
-        .setStreetAddress(data.streetAddress)
-        .setCity(data.city)
-        .setState(data.state)
-        .setZip(data.zip)
-        .setCountry(data.country)
-        .setPhoneNumber(data.phoneNumber)
-        .selectShippingMethod()
-        .clickNextButton()
-        .clickPlaceOrderButton()
-        .verifyCheckoutResult();
+    step("Fill in the 'Shipping Address' and 'Payments' forms and submit the order", () -> {
+        checkoutPage
+                .setEmail(data.email)
+                .setFirstName(data.firstName)
+                .setLastName(data.lastName)
+                .setStreetAddress(data.streetAddress)
+                .setCity(data.city)
+                .setState(data.state)
+                .setZip(data.zip)
+                .setCountry(data.country)
+                .setPhoneNumber(data.phoneNumber)
+                .selectShippingMethod()
+                .clickNextButton()
+                .clickPlaceOrderButton();
+    });
+
+    step("Verify that a successful purchase message is displayed", () -> {
+        checkoutPage.verifyCheckoutResult();
+    });
     }
 }
