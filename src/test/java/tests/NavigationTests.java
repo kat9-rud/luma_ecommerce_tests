@@ -1,8 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import data.MenuItemConstants;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,7 +9,6 @@ public class NavigationTests extends TestBase {
 
     @Test
     public void userCanSuccessfullyNavigateThroughCategories() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open home page and select 'What's New' category from the navigation menu, and verify that 'What's New' " +
                         "page is opened",
                 () -> {

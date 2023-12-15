@@ -1,9 +1,7 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
 import helpers.AdsUtils;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,7 +9,6 @@ import static io.qameta.allure.Allure.step;
 public class CheckoutTests extends TestBase {
     @Test
     public void guestUserCanSuccessfullyCheckout() {
-    SelenideLogger.addListener("allure", new AllureSelenide());
     TestData data = new TestData();
 
     step("Open home page and select 'women tees' category from the menu navigation", () -> {

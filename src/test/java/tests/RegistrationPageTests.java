@@ -1,8 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -12,7 +10,6 @@ public class RegistrationPageTests extends TestBase {
 
     @Test
     public void newCustomerAccountIsSuccessfullyCreatedTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open home page and click 'Create An Account' link", () -> {
             homePage.openPage()
                     .clickCreateAnAccountLink();

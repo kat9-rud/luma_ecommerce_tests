@@ -1,9 +1,7 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
 import helpers.AdsUtils;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -13,7 +11,6 @@ public class LoginTests extends TestBase {
 
     @Test
     public void newUserCanSuccessfullyLoginTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open home page and click 'Create An Account' link", () -> {
             homePage.openPage()
                     .clickCreateAnAccountLink();
@@ -52,7 +49,6 @@ public class LoginTests extends TestBase {
 
     @Test
     public void userCanSuccessfullyRecoverHisPasswordTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open home page and click 'Sign In' link", () -> {
             homePage.openPage()
                     .clickSignInLink();
