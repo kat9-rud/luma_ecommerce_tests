@@ -3,7 +3,7 @@
 
 >Luma is a demo online store built on Magento CMS
 
-##	Table of contents
+## :pushpin: Table of contents
 - [Technologies and tools](#technologist-technologies-and-tools)
 
 ## :computer: Technologies and tools
@@ -22,9 +22,9 @@
 <img width="6%" title="Jira" src="images/logo/Jira.svg">
 </p>
 
-## Project Description
+### Project Description
 
-### Autotests
+#### Autotests
 
 The autotests for this project are written in Java and utilize the following tools and frameworks:
 
@@ -37,7 +37,7 @@ The autotests for this project are written in Java and utilize the following too
 - **Allure TestOps**: Implemented as a Test Management System
 - **Telegram Bot**: Used for test results notifications
 
-### Allure Report Details
+#### Allure Report Details
 
 An Allure report includes:
 
