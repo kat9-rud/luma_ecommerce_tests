@@ -46,3 +46,22 @@ An Allure report includes:
 - Page source
 - Browser console logs
 - A video of the test running
+
+## :running_woman: How to run the tests
+### Running the tests from Terminal locally
+```
+gradle clean test
+```
+### Running the tests from Terminal remotely
+```
+clean test -Dremote=${REMOTE} -Dremote_login=${REMOTE_LOGIN} -Dremote_pass=${REMOTE_PASS} -Dresolution=${RESOLUTION} -Dbrowser=${BROWSER} -Dbrowser_version=${VERSION}
+```
+You need to specify the following parameteres:
+```
+* <code>REMOTE</code> - a remote server to run the tests
+* <code>REMOTE_LOGIN</code> - the server login
+* <code>REMOTE_PASS</code> - the server password
+* <code>RESOLUTION</code> - a browser window resolution (1920x1080 by default)
+* <code>BROWSER</code> - a browser (chrome by default)
+* <code>VERSION</code> - the browser version (100.0 by default)
+```
