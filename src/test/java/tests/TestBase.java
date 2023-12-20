@@ -25,10 +25,10 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = System.getProperty("browser", "");
-        Configuration.browserSize = System.getProperty("resolution", "");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserSize = System.getProperty("resolution", "1920x1080");
 
-        Configuration.browserVersion = System.getProperty("browser_version", "");
+        Configuration.browserVersion = System.getProperty("browser_version", "100.0");
         String login = System.getProperty("remote_login", "");
         String pass = System.getProperty("remote_pass", "");
         String remote = System.getProperty("remote", "");
