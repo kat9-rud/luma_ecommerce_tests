@@ -4,6 +4,7 @@
 >Luma is a demo online store built on Magento CMS
 
 ##	Table of contents
+- [Technologies and tools](#technologist-technologies-and-tools)
 
 ## Technologies and tools
 <p align="center">
