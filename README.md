@@ -5,6 +5,13 @@
 
 ## :pushpin: Table of contents
 - [Technologies and tools](#technologist-technologies-and-tools)
+- [How to run the tests from Terminal](#computer-how-to-run-the-tests-from-terminal)
+- [How to run the tests in Jenkins](#-how-to-run-the-tests-in-jenkins)
+- [Test results in Allure Report](#-test-results-in-allure-report)
+- [Integration with Allure TestOps](#-integration-with-allure-testops)
+- [Integration with Jira](#-integration-with-jira)
+- [Telegram notifications](#-telegram-notifications)
+- [Test running example in Selenoid](#-test-running-example-in-selenoid)
 
 ## :computer: Technologies and tools
 <p align="center">
