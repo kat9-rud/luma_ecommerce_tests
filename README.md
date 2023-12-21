@@ -94,5 +94,13 @@ After the build is completed in <code>**Build History**</code> section you will 
 After the build is completed, a special bot created in <code>Telegram</code>, automatically processes and sends a test run report message.
 
 <p align="center">
-<img title="Telegram Notifications" src="media/telegram.png">
+<img title="Telegram Notifications" src="images/screenshots/Telegram.png">
+</p>
+
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Test running example in Selenoid
+
+A video is attached to each test in the report.
+
+<p align="center">
+  <img title="Selenoid Video" src="images/video/test.gif">
 </p>
