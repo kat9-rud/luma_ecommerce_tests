@@ -47,21 +47,52 @@ An Allure report includes:
 - Browser console logs
 - A video of the test running
 
-## :running_woman: How to run the tests
-### Running the tests from Terminal locally
+## :computer: How to run the tests from Terminal
+### Running the tests locally
 ```
 gradle clean test
 ```
-### Running the tests from Terminal remotely
+### Running the tests remotely
 ```
 clean test -Dremote=${REMOTE} -Dremote_login=${REMOTE_LOGIN} -Dremote_pass=${REMOTE_PASS} -Dresolution=${RESOLUTION} -Dbrowser=${BROWSER} -Dbrowser_version=${VERSION}
 ```
 You need to specify the following parameteres:
-```
 * <code>REMOTE</code> - a remote server to run the tests
 * <code>REMOTE_LOGIN</code> - the server login
 * <code>REMOTE_PASS</code> - the server password
-* <code>RESOLUTION</code> - a browser window resolution (1920x1080 by default)
-* <code>BROWSER</code> - a browser (chrome by default)
-* <code>VERSION</code> - the browser version (100.0 by default)
-```
+* <code>RESOLUTION</code> - a browser window resolution (<code>1920x1080</code> by default)
+* <code>BROWSER</code> - a browser (<code>chrome</code> by default)
+* <code>VERSION</code> - the browser version (<code>100.0</code> by default)
+
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> How to run the tests in [Jenkins](https://jenkins.autotests.cloud/job/c17-kat_rud-luma-ecommerce/)
+Click <code>**Build With Parameters**</code> and select values for the options. Click <code>**Build**</code> button to start a build.
+<p align="center">
+  <img src="images/screenshots/Jenkins.png" alt="Jenkins" width="800">
+</p>
+
+After the build is completed in <code>**Build History**</code> section you will find <code>**Allure Report**</code> link right at the latest build. Click it to view the results on an HTML generated page.
+<p align="center">
+  <img src="images/screenshots/Allure_Report.png" alt="Jenkins" width="800">
+</p>
+
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Test results in [Allure Report](https://jenkins.autotests.cloud/job/c17-kat_rud-luma-ecommerce/allure/)
+<p align="center">
+  <img src="images/screenshots/Allure_Report_Details.png" alt="Jenkins" width="800">
+</p>
+
+## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Integration with [Allure TestOps](https://allure.autotests.cloud/launch/33209)
+<p align="center">
+  <img src="images/screenshots/Allure_TestOps.png" alt="testresults" width="900">
+</p>
+
+## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1002)
+<p align="center">
+  <img src="images/screenshots/Jira.png" alt="jira" width="900">
+</p>
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications
+After the build is completed, a special bot created in <code>Telegram</code>, automatically processes and sends a test run report message.
+
+<p align="center">
+<img title="Telegram Notifications" src="media/telegram.png">
+</p>
