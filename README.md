@@ -99,7 +99,7 @@ After the build is completed, a special bot created in <code>Telegram</code>, au
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Test running example in Selenoid
 
-A video is attached to each test in the report.
+Each test in the report comes with an attached video.
 
 <p align="center">
   <img title="Selenoid Video" src="images/video/test.gif">
