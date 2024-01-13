@@ -147,7 +147,7 @@ public class MenuNavigation {
             MenuItem topCategory = menu.getTopCategoryByName(category);
             SelenideElement topElement = topCategoryMenuItems.findBy(textCaseSensitive(topCategory.getName()));
 
-            if (subCategory.equals("")) {
+            if (subCategory.isEmpty()) {
                 topElement.click();
             } else {
                 result = menu.getSubSubCategoryWithParentByName(topCategory, subCategory);
